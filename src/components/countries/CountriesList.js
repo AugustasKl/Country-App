@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./CountriesList.module.css";
 import CountriesItem from "./CountriesItem";
 const CountriesList = (props) => {
-    console.log(props)
-    const data=props.countries
-    console.log(data)
+    console.log(props.countries)
+    // const countiesData=[...props.countries]
+    // console.log(countiesData)
   return (
     <React.Fragment>
       <div className={classes.intro}>
@@ -13,7 +13,7 @@ const CountriesList = (props) => {
       </div>
       <div className={classes.list}>
           <ul>
-            {data.map((country)=>{
+            {props.countries.map((country)=>{
                 return <CountriesItem
                 id={country.id}
                 key={country.id}

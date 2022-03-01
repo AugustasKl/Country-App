@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import CountriesList from "../components/countries/CountriesList"
+import { fetchCountries, fetchCountriesData } from "../lib/api"
 
 const DUMMY_COUNTRIES=[
     {
@@ -29,9 +31,16 @@ const DUMMY_COUNTRIES=[
 
 
 const AllCountries=()=>{
+    const dispatch=useDispatch()
+    const countriesData=useSelector((state)=>state.api.countries)
+    console.log(countriesData)
+    useEffect(()=>{
+        dispatch(fetchCountries())
+    },[dispatch])
+
     return(
         <React.Fragment>
-            <CountriesList countries={DUMMY_COUNTRIES}/>
+            <CountriesList countries={countriesData}/>
         </React.Fragment>
     )
 }

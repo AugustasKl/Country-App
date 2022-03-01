@@ -7,8 +7,8 @@ const CountriesItem = (props) => {
     <li className={classes.list}>
       <div className={classes.country}>
         <div className={classes.country}>{name}</div>
-        <div className={classes.region}>{region}</div>
-        <div className={classes.area}>{area}</div>
+        <div className={classes.region}>Region: {region}</div>
+        <div className={classes.area}>Size: {area} km</div>
       </div>
     </li>
   );
