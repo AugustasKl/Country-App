@@ -1,0 +1,30 @@
+.intro{
+  padding: 3rem ;
+  width: 100%;
+  height:100%;
+}
+.intro h1{
+    font-size: 1.5rem;
+    
+    align-items: flex-start;
+}
+
+.list ul{
+
+    width: 100%;
+    height: 100%;
+    background-color: #5DFA81;
+    list-style: none;
+    /* margin: 0; */
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    border-radius: 15px;
+    
+}
+.list ul {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
