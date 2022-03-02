@@ -1,5 +1,5 @@
 # Country App
-Country App is a single-page demo app created with React + Redux that gives you a list of countries, which can you filter based on given filters. 
+Country App is a single-page demo app created with React + Redux that gives you a list of countries, which can you filter based on provided filters. 
 
 ## Installation instructions
 1. Fork/copy this directory
