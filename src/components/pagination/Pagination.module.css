@@ -1,0 +1,17 @@
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+ }
+.pagination ul{
+    width: 60%;
+    border: transparent;
+}
+a{
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+    border: 1px solid green;
+    padding: 0.5rem;
+}

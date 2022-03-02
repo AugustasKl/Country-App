@@ -1,33 +1,8 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import CountriesList from "../components/countries/CountriesList"
-import { fetchCountries, fetchCountriesData } from "../lib/api"
+import { fetchCountries } from "../lib/api"
 
-const DUMMY_COUNTRIES=[
-    {
-        id:'c1',
-        name:'Lithuania',
-        region:'europe',
-        area:65300
-    },
-    {
-        id:'c2',
-        name:'Lithuania',
-        region:'europe',
-        area:65300
-    },
-    {
-        id:'c3',
-        name:'Lithuania',
-        region:'europe',
-        area:65300
-    },  {
-        id:'c4',
-        name:'Lithuania',
-        region:'europe',
-        area:65300
-    }
-]
 
 
 const AllCountries=()=>{
