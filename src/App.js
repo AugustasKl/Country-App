@@ -1,4 +1,3 @@
-import './App.css';
 import AllCountries from './pages/AllCountries';
 
 

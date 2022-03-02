@@ -25,7 +25,6 @@ const AllCountries=()=>{
         return <p className='centered'style={{color:"green"}}>Unable to fetch data from server</p>
       }
     
-
     return(
         <React.Fragment>
             <CountriesList countries={countriesData}/>

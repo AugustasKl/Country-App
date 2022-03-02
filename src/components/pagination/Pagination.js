@@ -8,21 +8,21 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   }
 
   return (
-      <ul className={classes.pagination}>
-        {pageNumbers.map((number, i) => {
-          return (
-            <li id={number} key={number} className={classes.number}>
-              <a
-                href={number}
-                onClick={(ev) => `${(ev.preventDefault(), paginate(number))}`}
-                className={classes.active}
-              >
-                {number}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+    <ul className={classes.pagination}>
+      {pageNumbers.map((number, i) => {
+        return (
+          <li id={number} key={number} className={classes.number}>
+            <a
+              href={number}
+              onClick={(ev) => `${(ev.preventDefault(), paginate(number))}`}
+              className={classes.active}
+            >
+              {number}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

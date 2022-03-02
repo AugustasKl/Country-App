@@ -14,7 +14,7 @@ const CountriesList = (props) => {
   const history = useHistory();
   const location = useLocation();
 
-  //Sorting ascending/descending logic
+  //Sorting A-Z/Z-A logic
   const countriesData = [...props.countries];
   const queryParams = new URLSearchParams(location.search);
   const isSortingAscending = queryParams.get("sort") !== "desc";
@@ -25,6 +25,7 @@ const CountriesList = (props) => {
       pathname: location.pathname,
       search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
     });
+    setCurrentPage(1)
   };
 
 
@@ -32,9 +33,8 @@ const CountriesList = (props) => {
   //Filter logic
   const filterChangeHandler = (selectedOption) => {
     setSelection(selectedOption);
+    setCurrentPage(1)
   };
-
-  
   const data = sortedCountries.filter((country) => {
     if (country.area < Number(selection)) {
       return country;
@@ -54,10 +54,11 @@ const CountriesList = (props) => {
   const paginateHandler = (pageNum) => {
     setCurrentPage(pageNum);
   };
-
+  
+  
+  //Jump to the top of the page after selecting other page
   useEffect(() => {
     window.scrollTo(0, 0)
-   
   }, [currentPosts])
   
 

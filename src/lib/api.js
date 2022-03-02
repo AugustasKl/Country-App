@@ -5,7 +5,7 @@ const API = "https://restcountries.com/v2/all?fields=name,region,area";
 
 export const fetchCountries = () => {
   return async (dispatch) => {
-     //sending notification to UI
+    //sending notification to UI
     dispatch(
       uiActions.pendingNotification({
         status: "pending",
@@ -39,7 +39,7 @@ export const fetchCountries = () => {
       })
       .catch((err) => {
         console.error(err);
-         //sending notification to UI
+        //sending notification to UI
         dispatch(
           uiActions.errorNotification({
             status: "error",
