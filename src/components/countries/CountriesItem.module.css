@@ -17,3 +17,8 @@
     flex-direction: column;
     align-items: flex-start;
 }
+
+label{
+    margin-top: -2rem;
+    padding-bottom: 0.5rem;
+}

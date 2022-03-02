@@ -33,7 +33,7 @@ const DUMMY_COUNTRIES=[
 const AllCountries=()=>{
     const dispatch=useDispatch()
     const countriesData=useSelector((state)=>state.api.countries)
-    console.log(countriesData)
+    
     useEffect(()=>{
         dispatch(fetchCountries())
     },[dispatch])
